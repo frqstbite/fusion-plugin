@@ -2,6 +2,6 @@
 /fusion-plugin.rbxlx
 
 # Lock files
-/*.lock
+*.lock
 
 /Packages
