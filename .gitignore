@@ -1,6 +1,7 @@
 # Project place file
 /fusion-plugin.rbxlx
 
-# Roblox Studio lock files
-/*.rbxlx.lock
-/*.rbxl.lock
+# Lock files
+/*.lock
+
+/Packages
