@@ -1,0 +1,10 @@
+{
+  "name": "fusion-plugin",
+  "tree": {
+    "$path": "src",
+
+    "Packages": {
+      "$path": "Packages"
+    }
+  }
+}

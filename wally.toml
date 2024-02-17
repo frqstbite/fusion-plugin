@@ -1,0 +1,8 @@
+[package]
+name = "frqstbite/fusion-plugin"
+description = "Rediscover the joy of plugins."
+version = "0.0.1"
+license = "MIT"
+authors = ["frqstbite <frqstbite1001@gmail.com>"]
+registry = "https://github.com/UpliftGames/wally-index"
+realm = "shared"
