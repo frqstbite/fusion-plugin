@@ -1,13 +1,16 @@
 # fusion-plugin #
 
-Build powerful type-safe plugins for Roblox Studio with [Fusion](https://elttob.uk/Fusion), a modern reactivity library for [Roblox](https://developer.roblox.com) [Luau](https://luau-lang.org).
+![GitHub License](https://img.shields.io/github/license/frqstbite/fusion-plugin)
+![Discord](https://img.shields.io/discord/385151591524597761?logo=discord&logoColor=%2300BE9B&color=%2300BE9B&link=https%3A%2F%2Fdiscord.gg%2Fross)
+
+Build powerful plugins for Roblox Studio with [Fusion](https://elttob.uk/Fusion), a modern reactivity library for [Roblox](https://developer.roblox.com) [Luau](https://luau-lang.org).
 
 ### Table of Contents ###
 
 * [Installation](#installation)
 * [Usage](#usage)
   * [Dockable Widgets](#dockable-widgets)
-  * [Toolbars](#toolbars-and-toolbar-buttons)
+  * [Toolbars](#toolbars)
   * [Plugin Menus](#plugin-menus)
   * [Plugin Actions](#plugin-actions)
 * [Contribution](#contribution)
@@ -84,7 +87,7 @@ Note how some props are **not reactive** due to the immutability of [PluginToolb
 ### Plugin Actions ###
 
 ## Contribution ##
-File an issue if you encounter a bug. Pull requests for bugfixes and additions are welcome.
+File an issue if you encounter a bug. Pull requests for bugfixes and improvements are welcome.
 
 
 ## License ##
