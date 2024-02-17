@@ -1,7 +1,7 @@
 # fusion-plugin #
 
 ![GitHub License](https://img.shields.io/github/license/frqstbite/fusion-plugin)
-![Discord](https://img.shields.io/discord/385151591524597761?logo=discord&logoColor=%2300BE9B&color=%2300BE9B&link=https%3A%2F%2Fdiscord.gg%2Fross)
+![Discord](https://img.shields.io/discord/385151591524597761?logo=discord&logoColor=%2300BE9B&color=%2300BE9B&link=https%3A%2F%2Fdiscord.gg%2Fr4qaSqKMqq)
 
 Build powerful plugins for Roblox Studio with [Fusion](https://elttob.uk/Fusion), a modern reactivity library for [Roblox](https://developer.roblox.com) [Luau](https://luau-lang.org).
 
