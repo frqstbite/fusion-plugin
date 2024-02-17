@@ -1,0 +1,13 @@
+{
+  "name": "example-plugin",
+  "tree": {
+    "$path": "example-plugin",
+
+    "Packages": {
+      "$path": "Packages",
+      "FusionPlugin": {
+        "$path": "src"
+      }
+    }
+  }
+}

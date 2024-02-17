@@ -1,0 +1,11 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Test Example Plugin",
+            "type": "shell",
+            "command": "rojo build --plugin \"example-plugin.rbxm\" example-plugin.project.json --watch",
+            "problemMatcher": []
+        }
+    ]
+}
