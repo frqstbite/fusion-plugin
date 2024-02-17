@@ -65,12 +65,12 @@ local Toolbar = FusionPlugin.Toolbar
 local ToolbarButton = FusionPlugin.ToolbarButton
 
 Toolbar "Example Plugin" {
-    ToolbarButton {
+    ToolbarButton "settings" {
         Active = ..., --whether the button is shaded gray
         ClickableWhenViewportHidden = true,
         [OnEvent "Click"] = function()
             print("TODO: open example plugin settings widget")
-        end
+        end,
 
         -- NON-REACTIVE
         Text = "Settings",
