@@ -2,10 +2,21 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "Test Example Plugin",
+            "label": "Build Example Plugin",
+            "type": "shell",
+            "command": "rojo build --plugin \"example-plugin.rbxm\" example-plugin.project.json",
+            "problemMatcher": []
+        },
+        {
+            "label": "Build and Watch Example Plugin",
             "type": "shell",
             "command": "rojo build --plugin \"example-plugin.rbxm\" example-plugin.project.json --watch",
             "problemMatcher": []
+        },
+        {
+            "label": "Publish to Wally",
+            "type": "shell",
+            "command": "wally publish --project-path",
         }
     ]
 }
