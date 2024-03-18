@@ -11,8 +11,9 @@ Build powerful plugins for Roblox Studio with [Fusion](https://elttob.uk/Fusion)
 * [Usage](#usage)
   * [Dockable Widgets](#dockable-widgets)
   * [Toolbars](#toolbars)
-  * [Plugin Menus](#plugin-menus)
   * [Plugin Actions](#plugin-actions)
+  * [Plugin Menus](#plugin-menus)
+* [Example](#example)
 * [Contribution](#contribution)
 * [License](#license)
 
@@ -23,7 +24,7 @@ Build powerful plugins for Roblox Studio with [Fusion](https://elttob.uk/Fusion)
 ## Usage ##
 
 Everything you'll need is available in the module.
-You acquire it like so, filling in the proper paths:
+You acquire it like so, providing the appropriate ModuleScripts:
 
 ```lua
 local Fusion = require(...)
@@ -82,9 +83,31 @@ Toolbar "Example Plugin" {
 
 Note how some props are **not reactive** due to the immutability of [PluginToolbar:CreateButton()](https://create.roblox.com/docs/reference/engine/classes/PluginToolbar#CreateButton)'s arguments.
 
-### Plugin Menus ###
+### Plugin Actions  ###
+Plugin actions are declared with the function `Action`:
+``
+```lua
+local Action = FusionPlugin.Action
 
-### Plugin Actions ###
+Action "coolaction" {
+    Bindable = true, --whether this action should be visible in the keybinds window
+    Icon = image,
+    Text = "Cool Action",
+    Tooltip = "this means only good things",
+
+    [OnEvent "Triggered"] = function()
+        print("cool things underway.......")
+    end,
+}
+```
+
+### Plugin Menus ###
+[PluginMenus](https://create.roblox.com/docs/reference/engine/classes/PluginMenu) are not yet supported. Feel free to contribute an implementation.
+
+
+## Example
+A comprehensive [sample file](./example-plugin/init.server.lua) has been written for your reference. Build commands can be found in the [vscode tasks.json file](./.vscode/tasks.json).
+
 
 ## Contribution ##
 File an issue if you encounter a bug. Pull requests for bugfixes and improvements are welcome.
