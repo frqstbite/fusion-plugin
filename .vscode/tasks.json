@@ -16,7 +16,7 @@
         {
             "label": "Publish to Wally",
             "type": "shell",
-            "command": "wally publish --project-path",
+            "command": "wally publish",
         }
     ]
 }
