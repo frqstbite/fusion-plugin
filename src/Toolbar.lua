@@ -1,9 +1,10 @@
-type Fusion = typeof(require(script.Parent.Fusion))
+local ToolbarButton = require(script.Parent.ToolbarButton)
+type ToolbarButtonConstructor = ToolbarButton.ToolbarButtonConstructor
 
-return function(_, plugin: Plugin)
+return function(_: any, plugin: Plugin)
     local function Toolbar(name: string)
         local toolbar = plugin:CreateToolbar(name)
-        return function(buttons)
+        return function(buttons: {ToolbarButtonConstructor})
             for _, constructor in ipairs(buttons) do
                 constructor(toolbar)
             end

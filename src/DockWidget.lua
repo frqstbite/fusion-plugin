@@ -1,23 +1,30 @@
 local root = script.Parent
 
-return function(fusion, plugin)
+local fusionTypes = require(root.FusionTypes)
+type CanBeState<T> = fusionTypes.CanBeState<T>
+
+return function(fusion: any, plugin: Plugin)
     local Hydrate = fusion.Hydrate
-    local unwrap = require(root.unwrap)
 
     type DockWidgetProps = {
-        
+        Enabled: CanBeState<boolean>?,
+        InitialDockState: Enum.InitialDockState?,
+        MinimumSize: Vector2?,
+        Size: Vector2,
+        Title: CanBeState<string>?,
     }
 
     local function DockWidget(id: string)
-        return function(props: {[string]: any})
+        return function(props: DockWidgetProps): DockWidgetPluginGui
 
             props = props or {}
-            local size = unwrap(props.Size) :: Vector2
-            local minimumSize = unwrap(props.MinimumSize) :: Vector2?
+            local initialDockState = props.InitialDockState
+            local minimumSize = props.MinimumSize
+            local size = props.Size
             
             -- Create widget
             local widget = plugin:CreateDockWidgetPluginGui(id, DockWidgetPluginGuiInfo.new(
-                Enum.InitialDockState.Float,
+                initialDockState or Enum.InitialDockState.Float,
                 false,
                 false,
                 size.X,
@@ -26,9 +33,12 @@ return function(fusion, plugin)
                 if minimumSize then minimumSize.Y else size.Y
             ))
             
+            props.Enabled = props.Enabled or false
+            props.InitialDockState = nil
             props.Name = id
-            props.Size = nil
             props.MinimumSize = nil
+            props.Size = nil
+            props.Title = props.Title or id
             return Hydrate(widget)(props)
         end
     end

@@ -1,21 +1,22 @@
 local root = script.Parent
 local unwrap = require(root.unwrap)
 
-local localFusion = require(root.Fusion)
-type Fusion = typeof(localFusion)
+local fusionTypes = require(root.FusionTypes)
+type CanBeState<T> = fusionTypes.CanBeState<T>
 
-return function(fusion: Fusion, plugin: Plugin)
+export type ToolbarButtonProps = {
+    Active: CanBeState<boolean>,
+    Icon: string,
+    Text: string,
+    Tooltip: string,
+}
+
+export type ToolbarButtonConstructor = (toolbar: PluginToolbar) -> PluginToolbarButton
+
+return function(fusion: any, plugin: Plugin)
     local Cleanup = fusion.Cleanup
     local Hydrate = fusion.Hydrate
     local Observer = fusion.Observer
-
-    type ToolbarButtonProps = {
-        Active: localFusion.CanBeState<boolean>,
-
-        Tooltip: string,
-        Icon: string,
-        Text: string,
-    }
 
     local function ToolbarButton(id: string)
         return function(props: ToolbarButtonProps)
