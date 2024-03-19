@@ -19,8 +19,8 @@ return function(fusion: any, plugin: Plugin)
 
             props = props or {}
             local initialDockState = props.InitialDockState
-            local minimumSize = props.MinimumSize
             local size = props.Size
+            local minimumSize = props.MinimumSize or size
             
             -- Create widget
             local widget = plugin:CreateDockWidgetPluginGui(id, DockWidgetPluginGuiInfo.new(
