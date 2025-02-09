@@ -29,8 +29,8 @@ return function(fusion: any, plugin: Plugin)
                 false,
                 size.X,
                 size.Y,
-                if minimumSize then minimumSize.X else size.X,
-                if minimumSize then minimumSize.Y else size.Y
+                minimumSize.X,
+                minimumSize.Y
             ))
             
             props.Enabled = props.Enabled or false
